@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var promise = new Promise(function (resolve, reject) {
+            const x = "maths";
+            const y = "maths";
+            if (x === y) {
+                resolve();
+            } else {
+                reject();
+            }
+        });
+
+        promise.then(function () {
+            console.log('Success, NO error found');
+        }, function () {
+            throw new Error("");
+            console.log("reject is called");
+
+        }).catch(function () {
+            console.log("some error has occued");
+        })
+    </script>
+</body>
+
+</html>
